@@ -1,0 +1,14 @@
+.fter {
+  text-transform: uppercase;
+  padding: 10px 0;
+  line-height: 1cm;
+}
+.fter p {
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+footer {
+  background: #bbb0b0;
+}

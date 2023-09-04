@@ -1,0 +1,58 @@
+.register-form {
+  width: min-content;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.register-form .register_title,
+.login_title {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.wpcf7-form-control {
+  border: none;
+  margin: 30px 0;
+  border-bottom: 1px solid #ccc;
+}
+.require {
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.regis_btn {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #fff;
+  border: 1px solid #000;
+  font-weight: bolder;
+  letter-spacing: 0.2cm;
+  text-align: center;
+}
+
+.login {
+  width: min-content;
+  margin: 100px auto;
+}
+
+.login_btn {
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+.forgot {
+  font-weight: bolder;
+  color: #ccc;
+  opacity: 1;
+  margin-bottom: 20px;
+}
+
+.cre {
+  font-weight: bolder;
+}
+#des {
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 20px;
+}

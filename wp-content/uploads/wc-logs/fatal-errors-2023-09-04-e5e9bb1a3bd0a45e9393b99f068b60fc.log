@@ -1,0 +1,8 @@
+2023-09-04T12:22:24+00:00 CRITICAL Uncaught Error: Call to undefined function twenty_twenty_one_the_posts_navigation() in C:\xampp\htdocs\ambious\wp-content\themes\ambious\search.php:58
+Stack trace:
+#0 C:\xampp\htdocs\ambious\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\ambious\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ambious\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\ambious\wp-content\themes\ambious\search.php on line 58
+
