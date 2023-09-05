@@ -135,7 +135,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 
                             <div class="product-quantity"
                                 data-title="<?php esc_attr_e( 'Quantity', 'woocommerce' ); ?>">
+
+
                                 <?php
+								
 											if ( $_product->is_sold_individually() ) {
 												$min_quantity = 1;
 												$max_quantity = 1;
@@ -157,7 +160,14 @@ do_action( 'woocommerce_before_cart' ); ?>
 											);
 
 											echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item ); // PHPCS: XSS ok.
+											
+											
 											?>
+
+
+
+
+
                             </div>
 
                             <div class="product-subtotal"
@@ -205,27 +215,27 @@ do_action( 'woocommerce_before_cart' ); ?>
                 </div>
                 <?php do_action( 'woocommerce_cart_contents' ); ?>
 
-            </div>
-
-            <div class="col-lg-6">
                 <?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 
+            </div>
+            <div class="col-lg-6">
                 <div class="cart-collaterals">
                     <?php
-					/**
-					 * Cart collaterals hook.
-					 *
-					 * @hooked woocommerce_cross_sell_display
-					 * @hooked woocommerce_cart_totals - 10
-					 */
-					do_action( 'woocommerce_cart_collaterals' );
+						/**
+						 * Cart collaterals hook.
+						 *
+						 * @hooked woocommerce_cross_sell_display
+						 * @hooked woocommerce_cart_totals - 10
+						 */
+						do_action( 'woocommerce_cart_collaterals' );
 					?>
                 </div>
 
                 <?php do_action( 'woocommerce_after_cart' ); ?>
-            </div>
 
+            </div>
         </div>
-    </div>
-    <?php do_action( 'woocommerce_after_cart_table' ); ?>
+
+
+        <?php do_action( 'woocommerce_after_cart_table' ); ?>
 </form>

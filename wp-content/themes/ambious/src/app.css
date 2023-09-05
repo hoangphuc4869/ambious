@@ -13,7 +13,6 @@
 .wpcf7-form-control {
   border: none;
   margin: 30px 0;
-  border-bottom: 1px solid #ccc;
 }
 .require {
   font-style: italic;
@@ -55,4 +54,46 @@
   font-size: 14px;
   font-style: italic;
   margin-top: 20px;
+}
+
+.product-name {
+  font-size: 30px;
+}
+.product-name,
+.product-price,
+.product-quantity,
+.product-subtotal {
+  margin-top: 20px;
+}
+
+.cart-subtotal {
+  text-transform: uppercase;
+}
+
+.shipping {
+  text-transform: uppercase;
+}
+.order-total {
+  text-transform: uppercase;
+}
+
+.cart-subtotal .amount {
+  font-size: 30px;
+}
+
+.order-total .amount {
+  font-size: 30px;
+}
+
+.cart_totals {
+  padding-left: 60px;
+}
+.cart_totals h2 {
+  margin-bottom: 20px;
+}
+
+.search-mobile {
+  position: absolute;
+  bottom: -10px;
+  right: 0;
 }

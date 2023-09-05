@@ -1,5 +1,7 @@
 .box-header {
-  position: relative;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .menu-bar-icon {
@@ -16,6 +18,19 @@
 .bg-header {
   justify-content: space-between;
   padding: 20px 0;
+  position: relative;
+  /* overflow: hidden; */
+}
+.count {
+  position: absolute;
+  right: -5px;
+  font-weight: bold;
+}
+
+.count_ {
+  position: absolute;
+  top: 0;
+  right: -20px;
 }
 
 .menu-pc li {
@@ -33,7 +48,7 @@
 .img-banner {
   width: 100%;
   height: auto;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -47,8 +62,8 @@
 .menu-menu-extended-container {
   position: absolute;
   width: fit-content;
-  background-color: #fff;
-  padding: 10px 50px;
+  background-color: #ddd;
+  /* padding: 10px 50px; */
   top: 80px;
   left: 100px;
   border-radius: 10px;
@@ -71,15 +86,17 @@
 }
 
 .menu-right {
-  background-color: #fff;
+  background-color: #ddd;
   position: absolute;
   top: 0;
   /* bottom: 0; */
   right: 0;
   padding-left: 30px;
+  padding-right: 30px;
   padding-top: 36px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  padding-bottom: 50px;
+  /* border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; */
   width: 400px;
   display: none;
   z-index: 999999;
@@ -103,15 +120,17 @@
 }
 
 #newsletter {
-  margin-top: 100px;
+  margin-top: 50px;
   font-weight: bolder;
 }
 
 #account {
   border: none;
-  border-bottom: 1px solid #8b8787;
+  /* border-bottom: 1px solid #8b8787; */
   margin-top: 10px;
   margin-bottom: 50px;
+  padding: 10px 5px;
+  border-radius: 5px;
 }
 
 .menu-right ul li a {
@@ -120,7 +139,7 @@
   font-weight: bolder;
 }
 .menu-right ul {
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 label#interest_label {
@@ -158,7 +177,6 @@ span.wpcf7-list-item {
 }
 
 .search-form {
-  position: absolute;
   width: 100%;
   margin-top: 20px;
   display: none;
@@ -169,6 +187,9 @@ span.wpcf7-list-item {
 }
 .hide {
   display: none;
+}
+.tab {
+  text-align: center;
 }
 
 .tabcontent {
@@ -185,5 +206,30 @@ span.wpcf7-list-item {
   margin-top: 20px;
 }
 .active {
-  border-bottom: 1px solid #000;
+  border-bottom: 3px solid #f5b92d;
+}
+
+.fa-bars {
+  cursor: pointer;
+}
+
+.menu-menu-extended-container li {
+  padding: 10px 50px;
+}
+.menu-menu-extended-container li a {
+  position: relative;
+}
+
+.menu-menu-extended-container li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  border-bottom: 3px solid #f5b92d;
+  display: none;
+}
+
+.menu-menu-extended-container li:hover a::after {
+  display: block;
 }

@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-    <?php echo do_shortcode('[contact-form-7 id="ad3fcd6" title="account form"]');?>
+</div>
 </div>
 
 <?php get_footer() ?>
