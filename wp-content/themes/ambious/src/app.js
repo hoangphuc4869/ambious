@@ -33,6 +33,9 @@ submit.addEventListener("click", () => {
   popup.classList.add("show");
 });
 
+acc.addEventListener("click", () => {
+  menu_right.classList.add("show");
+});
 acc1.addEventListener("click", () => {
   menu_right.classList.add("show");
 });
@@ -43,11 +46,12 @@ close_btn.addEventListener("click", () => {
 
 const search = document.querySelector("#menu-item-31");
 const search1 = document.querySelector("#menu-item-261");
-console.log(search1);
+// console.log(search1);
 
 const search_form = document.querySelector(".search-form");
 const search_form1 = document.querySelector(".search-mobile .search-form");
-console.log(search_form1);
+// console.log(search_form1);
+
 search.addEventListener("click", show_search);
 search1.addEventListener("click", show_search1);
 
@@ -61,7 +65,7 @@ function show_search1() {
 const b = document.querySelector(
   "li.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-31"
 );
-console.log(b);
+// console.log(b);
 
 function openCity(evt, cityName) {
   var i, tabcontent, tablinks;

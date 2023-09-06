@@ -341,6 +341,8 @@ do_action( 'woocommerce_before_cart' ); ?>
                             class="button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>"
                             name="apply_coupon"
                             value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_html_e( 'Apply coupon', 'woocommerce' ); ?></button>
+
+
                         <?php do_action( 'woocommerce_cart_coupon' ); ?>
                     </div>
                     <?php } ?>

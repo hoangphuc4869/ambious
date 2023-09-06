@@ -4,12 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php the_title()?></title>
+    <title><?php if (is_front_page()) : ?>
+        <?php bloginfo('name') ?>
+        <?php elseif (is_single()) : ?>
+        <?php echo wp_title('', true, ''); ?>
+        <?php else : ?>
+        <?php echo wp_title('', true, ''); ?>
+        <?php endif ?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory')?>/src/reset.css">
+
+    <link rel="stylesheet" href="<?php bloginfo('template_directory')?>/src/header.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory')?>/src/footer.css">
+
+    <link rel="stylesheet" href="<?php bloginfo('template_directory')?>/style.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory')?>/src/app.css">
     <?php wp_head();?>
 </head>
 
@@ -18,35 +31,54 @@
     <header>
         <div class="box-header">
             <div class="container-fluid custom">
-                <div class="bg-header">
-                    <div class="header-1">
-                        <div class="menu-bar-icon">
-                            <i class="fa-solid fa-bars"></i>
+                <div class="row cus_head">
+                    <div class="col-6">
+                        <div class="bg-header">
+                            <div class="header-1">
+                                <div class="menu-bar-icon">
+                                    <i class="fa-solid fa-bars"></i>
+                                </div>
+
+                                <a href="<?php bloginfo('url')?>"><img
+                                        src="<?php echo get_field('logo_img','option');?>" alt=""
+                                        class="img-fluid logo"></a>
+                                <select class="language-change" name="language" id="lang">
+                                    <option value="english">ENG</option>
+                                    <option value="vietnamese">VN</option>
+
+                                </select>
+                            </div>
+
+
+                            <!-- <div class="count">
+                                <?php
+                                global $woocommerce;
+                            echo '('. $woocommerce->cart->get_cart_contents_count() . ')';
+                             ?>
+                            </div> -->
+
+                            <!--  -->
                         </div>
-
-                        <a href="<?php bloginfo('url')?>"><img src="<?php echo get_field('logo_img','option');?>" alt=""
-                                class="img-fluid logo"></a>
                     </div>
-
-                    <div class="main-menu">
-                        <?php wp_nav_menu (
+                    <div class="col-6">
+                        <div class="right">
+                            <div class="main-menu">
+                                <?php wp_nav_menu (
                          array('theme_location' => 'menu', 'menu_class' => 'menu-pc'));?>
-                        <?php echo get_search_form(); ?>
-                    </div>
+                                <?php echo get_search_form(); ?>
+                            </div>
 
-                    <div class="mobile-menu">
-                        <?php wp_nav_menu (
+                            <div class="mobile-menu">
+                                <?php wp_nav_menu (
                          array('theme_location' => 'menu-mobile', 'menu_class' => 'mobile'));?>
+                            </div>
+
+                            <div class="search-mobile">
+
+                                <?php echo get_search_form(); ?>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="search-mobile">
-
-                        <?php echo get_search_form(); ?>
-                    </div>
-
-                    <!--  -->
-
-
                 </div>
             </div>
         </div>
@@ -87,6 +119,7 @@
             </div>
 
             <div id="cart" class="tabcontent">
+
 
 
             </div>

@@ -5,7 +5,7 @@
 }
 
 .menu-bar-icon {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .bg-header,
@@ -23,7 +23,7 @@
 }
 .count {
   position: absolute;
-  right: -5px;
+  right: -15px;
   font-weight: bold;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .menu-pc li {
-  padding: 0 15px;
+  padding: 0 0 0 15px;
 }
 
 .menu-pc a {
@@ -79,10 +79,6 @@
 .ext-menu li {
   text-align: left;
   line-height: 1cm;
-}
-
-.custom {
-  padding: 0 100px;
 }
 
 .menu-right {
@@ -177,6 +173,7 @@ span.wpcf7-list-item {
 }
 
 .search-form {
+  position: absolute;
   width: 100%;
   margin-top: 20px;
   display: none;
@@ -232,4 +229,12 @@ span.wpcf7-list-item {
 
 .menu-menu-extended-container li:hover a::after {
   display: block;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.search-mobile .search-form {
+  position: relative;
 }

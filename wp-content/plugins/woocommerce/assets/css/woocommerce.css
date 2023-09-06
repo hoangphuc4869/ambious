@@ -585,8 +585,8 @@ p.demo_store a {
   text-decoration: none;
 }
 .woocommerce ul.products li.product a img {
-  height: 250px;
-  width: auto;
+  height: auto;
+  width: 100%;
   display: block;
   margin: 0 0 1em;
   box-shadow: none;
